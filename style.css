@@ -43,10 +43,37 @@ body::before {
 
 header {
   background: linear-gradient(135deg, rgba(0,102,255,0.9), rgba(0,255,157,0.9));
-  padding: 3rem 1rem;
+  padding: 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-section {
+  position: relative;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
 }
 
 header::after {
@@ -284,5 +311,15 @@ blog-card a {
   
   .blog-card {
     margin: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
   }
 }
